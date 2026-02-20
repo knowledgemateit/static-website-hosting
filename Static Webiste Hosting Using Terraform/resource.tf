@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket1" {
-    bucket = "var.bucketname"
+    bucket = "rajutraingingtest"
   
 }
 resource "aws_s3_bucket_public_access_block" "bucket1" {
@@ -12,14 +12,14 @@ resource "aws_s3_bucket_public_access_block" "bucket1" {
 }
 
 resource "aws_s3_object" "index" {
-  bucket = "var.bucketname"
+  bucket = "rajutraingingtest"
   key    = "index.html"
   source = "index.html"
   content_type = "text/html"
 }
 
 resource "aws_s3_object" "error" {
-  bucket = "var.bucketname"
+  bucket = "rajutraingingtest"
   key    = "error.html"
   source = "error.html"
   content_type = "text/html"
@@ -59,3 +59,4 @@ resource "aws_s3_bucket_policy" "public_read_access" {
 EOF
 
 }
+
